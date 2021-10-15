@@ -175,6 +175,10 @@ a {
     .flex-container {
         flex-direction: column;
     }
+
+    .flex-item-right #mockup{
+        display: none;
+    }
 }
 
 .container {
