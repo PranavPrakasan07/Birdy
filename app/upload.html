@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruthie&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a id="nav" href="index.html" style="font-family: 'Ruthie', cursive; font-size: 24px;">B</a>
+        <a id="nav" href="index.html">Home</a>
+        <a id="nav" href="facts.html">Facts</a>
+        <a id="nav" href="whats_new.html">What's New!</a>
+        <a href="javascript:void(0);" class="icon" onclick="navFlexFunction()">
+            <div class="container" onclick="menuFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="flex-container">
+
+        <div class="flex-item-left">
+            <center>
+                <p id="tagline" style="padding: 0px;">Upload an image or take a pic</p>
+                <br>
+
+                <img id="mockup_image"src="../static/images/phone_mockup.png" width="25%" height="auto">
+
+
+                <!-- <table cellspacing="25px">
+                    <tr>
+                        <td style="padding: 0px; text-align: center;"><img src="../static/images/upload.svg" width="40px" height="auto"></td>
+                        <td style="padding: 0px; text-align: center;"><img src="../static/images/camera.svg" width="40px" height="auto"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input style="background-color: white; color: black;" type="file" name="Upload Image">
+                        </td>
+                        <td>
+                            <input type="submit" value="Camera" style="background-color: white; color: black;">
+                        </td>
+
+                    </tr>
+                </table> -->
+
+                <div class="flex-container">
+                    <div class="flex-item-left">
+                        <img src="../static/images/upload.svg" width="40px" height="auto"><br>
+                        <input style="background-color: white; color: black;" type="file" name="Upload Image"><br>
+                        <input type="submit" value="Submit" style="background-color: white; color: black;">
+
+                    </div>
+                    <div class="flex-item-right">
+                        <img src="../static/images/camera.svg" width="40px" height="auto"><br>
+                        <input type="submit" value="Camera" style="background-color: white; color: black;">
+                    </div>
+                </div>
+
+                <br>
+
+                
+                    <div id="button">
+                        <a href="upload.html" style="color: white;">Identify</a> 
+                    </div>
+
+                    <br>
+                    <br>
+               
+
+            </center>
+        </div>
+
+
+        <div class="flex-item-right">
+            <img src="../static/images/phone_mockup.png" width="50%" height="auto">
+        </div>
+
+    </div>
+
+    
+    <!-- Footer here -->
+
+    <div class="flex-container" style="background-color: black; color: white; padding: 16px;">
+
+        <div class="flex-item-left" style="padding: 16px;">
+
+            <p id="content">Reach Out</p>
+
+            <table>
+                <tr>
+                    <td><img src="../static/images/linkedin.svg"></td>
+                    <td><img src="../static/images/instagram.svg"></td>
+                    <td><img src="../static/images/twitter.svg"></td>
+                    <td><img src="../static/images/github.svg"></td>
+                </tr>
+            </table>
+
+            <p id="content">Phone +91 9191919191</p>
+            <p id="content">Mail Us teamten@gmail.com</p>
+            <br>
+
+        </div>
+
+
+        <div class="flex-item-right">
+            <center>
+                <fieldset>
+                    <legend>Feedback</legend>
+
+                    <input type="email" name="email" id="email" placeholder="someone@gmail.com">
+                    <br>
+                    <input type="text" name="address" id="address"
+                        placeholder="We’d love to know what you think about our product!">
+
+                </fieldset>
+            </center>
+        </div>
+
+    </div>
+
+    <!-- Footer ends here -->
+
+    <script>
+        function navFlexFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function menuFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    </script>
+</body>
+
+</html>
