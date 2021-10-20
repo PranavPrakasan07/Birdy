@@ -78,6 +78,19 @@ a {
     width: fit-content;
 }
 
+#button_headers {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-left: 15%;
+    padding-right: 10%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    text-align: left;
+    margin-top: 0%;
+    width: fit-content;
+}
+
 #button {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -92,7 +105,7 @@ a {
     width: fit-content;
     text-align: center;
     border: 0px;
-    border-radius: 24px;
+    border-radius: 10px;
 }
 
 .flex-container {
@@ -110,7 +123,6 @@ a {
     padding: 10px;
     flex: 50%;
 }
-
 
 .topnav {
     overflow: hidden;
@@ -145,10 +157,12 @@ a {
     .topnav a:not(:first-child) {
         display: none;
     }
-
     .topnav a.icon {
         float: right;
         display: block;
+    }
+    #mockup_image {
+        display: none;
     }
 }
 
@@ -156,13 +170,11 @@ a {
     .topnav.responsive {
         position: relative;
     }
-
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-
     .topnav.responsive a {
         float: none;
         display: block;
@@ -171,9 +183,13 @@ a {
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
+
 @media (max-width: 800px) {
     .flex-container {
         flex-direction: column;
+    }
+    .flex-item-right #mockup {
+        display: none;
     }
 }
 
@@ -182,9 +198,7 @@ a {
     cursor: pointer;
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.bar1, .bar2, .bar3 {
     width: 30px;
     height: 4px;
     background-color: #333;
@@ -204,4 +218,41 @@ a {
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+fieldset {
+    color: white;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin: 16px;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+}
+
+input {
+    color: white;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 4px 16px 4px 16px;
+    margin: 8px;
+    border: 0px;
+}
+
+.version_content {
+    height: 80vh;
+}
+
+.upsubmit {
+    margin-left: 100px;
+    top: 650px;
+    position: relative;
+    /* left: 200px; */
+    right: 1180px;
+}
+
+.upfile {
+    margin-left: 100px;
+    top: 603px;
+    position: relative;
+    right: 1000px;
 }
