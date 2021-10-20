@@ -42,59 +42,59 @@
     <div class="flex-container">
 
         <div class="flex-item-left">
-            <p id="app_name">Birdy</p>
-            <p id="tagline">Tagline here!</p>
-            <br>
-            <br>
-            <br>
-        </div>
-
-
-        <div class="flex-item-right">
-            <img src="../static/images/bird_illustration.png" width="50%" height="auto">
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="flex-container">
-
-        <div class="flex-item-right">
-            <img src="../static/images/phone_mockup.png" id="mockup" width="50%" height="auto">
-        </div>
-
-        <div class="flex-item-left">
-            <p id="title">How to Use?</p>
-
-            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim duis enim non ac ut. Ut et
-                arcu purus
-                sagittis elementum cursus. Laoreet eu aliquam diam scelerisque. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit.
-                Debitis eum nisi culpa corrupti dignissimos perspiciatis blanditiis voluptatum placeat quasi.
-                Pariatur assumenda odio esse possimus veniam distinctio non architecto itaque tenetur?</p>
-            <br>
-
-            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim duis enim non ac ut. Ut et
-                arcu purus
-                sagittis elementum cursus. Laoreet eu aliquam diam scelerisque. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit.
-                Debitis eum nisi culpa corrupti dignissimos perspiciatis blanditiis voluptatum placeat quasi.
-                Pariatur assumenda odio esse possimus veniam distinctio non architecto itaque tenetur?</p>
-            <br>
-            <br>
             <center>
-                <div id="button">
-                    <a href="upload.html" style="color: white;">Continue</a> 
-                </div>
-            </center>
-            <br>
-            <br>
+                <p id="tagline" style="padding: 0px;">Upload an image or take a pic</p>
+                <br>
 
+                <img id="mockup_image"src="../static/images/phone_mockup.png" width="25%" height="auto">
+
+
+                <!-- <table cellspacing="25px">
+                    <tr>
+                        <td style="padding: 0px; text-align: center;"><img src="../static/images/upload.svg" width="40px" height="auto"></td>
+                        <td style="padding: 0px; text-align: center;"><img src="../static/images/camera.svg" width="40px" height="auto"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input style="background-color: white; color: black;" type="file" name="Upload Image">
+                        </td>
+                        <td>
+                            <input type="submit" value="Camera" style="background-color: white; color: black;">
+                        </td>
+
+                    </tr>
+                </table> -->
+
+                <div class="flex-container">
+                    <div class="flex-item-left">
+                        <img src="../static/images/upload.svg" width="40px" height="auto"><br>
+                        <input style="background-color: white; color: black;" type="file" name="Upload Image"><br>
+                        <input type="submit" value="Submit" style="background-color: white; color: black;">
+
+                    </div>
+                    <div class="flex-item-right">
+                        <img src="../static/images/camera.svg" width="40px" height="auto"><br>
+                        <input type="submit" value="Camera" style="background-color: white; color: black;">
+                    </div>
+                </div>
+
+                <br>
+
+                
+                    <div id="button">
+                        <a href="upload.html" style="color: white;">Identify</a> 
+                    </div>
+
+                    <br>
+                    <br>
+               
+
+            </center>
+        </div>
+
+
+        <div class="flex-item-right">
+            <img src="../static/images/phone_mockup.png" width="50%" height="auto">
         </div>
 
     </div>
@@ -141,7 +141,6 @@
     </div>
 
     <!-- Footer ends here -->
-
 
     <script>
         function navFlexFunction() {
