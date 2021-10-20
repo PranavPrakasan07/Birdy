@@ -226,3 +226,25 @@ a {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+fieldset{
+    color: white;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin: 16px;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+}
+
+input{
+    color: white;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 4px 16px 4px 16px;
+    margin: 8px;
+    border: 0px;
+}
+
+.version_content{
+    height: 80vh;
+}
