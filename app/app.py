@@ -1,33 +1,31 @@
+#.....................................PACKAGES
 import os
 from flask import Flask,render_template,request,flash,redirect,url_for
 from keras_preprocessing import image
 from werkzeug.utils import secure_filename
 import numpy as np
-UPLOAD_FOLDER="/Users/ramkrithik/Desktop/HCI/project/upload/"
 from tensorflow.keras.models import load_model
 import tensorflow.keras.utils as image
 import names
 
-
+#....................................INITIALISATION
+UPLOAD_FOLDER="/Users/ramkrithik/Desktop/HCI/project/upload/"
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "1234"
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
+#....................................HOME
 @app.route("/")
 @app.route("/home")
 def first():
     return render_template("index.html")
 
+#....................................UPLOAD
 @app.route("/upload")
 def upload():
-    return render_template("second.html")
-    
+    return render_template("upload.html")
+
+#.....................................FILE HANDLING
 @app.route("/process",methods=["POST", "GET"])
 def third():
     if request.method == 'POST':
@@ -40,8 +38,8 @@ def third():
         print("upload folder is ", filepath)
         f.save(filepath)
         return redirect(url_for("model",name=s))
-    #return render_template("third.html")
 
+#......................................PREDICTION
 @app.route("/display/<name>")
 def model(name):
     x=UPLOAD_FOLDER+name
@@ -49,19 +47,25 @@ def model(name):
     img = image.load_img(x,target_size = (64,64))
     x = image.img_to_array(img)
     x = np.expand_dims(x,axis =0)
-    preds = model.predict(x)
-
-    prediction = names.name(int(preds[0][0]))
-    print(preds)
+    preds = list(model.predict(x))
+    for i,j in enumerate(preds):
+        preds[i]=list(j)
+    prediction = names.name(preds[0].index(max(preds[0])))
+    before=prediction
     print("prediction", prediction)
-        
-    text = "The prediction is : " + str(prediction)
-        
-    return text
-    #return x
-    #return render_template("third.html")
+    if " " in prediction:
+        prediction=prediction.split(" ")
+        prediction[0]=prediction[0].capitalize()
+        for i in range(1,len(prediction)):
+            prediction[i]=prediction[i].lower()
+        prediction="_".join(prediction)
+    else:
+        prediction=prediction.capitalize()
+    text = "The prediction is : " + prediction
+    return render_template("facts.html",name=before)
 
-@app.route("/fourth")
+#.......................................UPDATES
+@app.route("/new")
 def fourth():
     return render_template("fourth.html")
 
