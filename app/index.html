@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/app/static/css/main.css">
+    <link rel="icon" href="/app/static/images/home_pi.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruthie&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a id="nav" href="index.html" style="font-family: 'Ruthie', cursive; font-size: 24px;">B</a>
+        <a id="nav" href="index.html">Home</a>
+        <a id="nav" href="/app/templates/facts.html">Facts</a>
+        <a id="nav" href="/app/templates/whats_new.html">What's New!</a>
+        <a href="javascript:void(0);" class="icon" onclick="navFlexFunction()">
+            <div class="container" onclick="menuFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="flex-container">
+
+        <div class="flex-item-left">
+            <p id="app_name">Birdy</p>
+            <p id="tagline">Tagline here!</p>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <div class="flex-item-right">
+            <img src="/app/static/images/bird_illustration.png" width="50%" height="auto">
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flex-container">
+
+        <div class="flex-item-right">
+            <img src="/app/static/images/phone_mockup.png" id="mockup" width="50%" height="auto">
+        </div>
+
+        <div class="flex-item-left">
+            <p id="title">How to Use?</p>
+
+            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim duis enim non ac ut. Ut et
+                arcu purus
+                sagittis elementum cursus. Laoreet eu aliquam diam scelerisque. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit.
+                Debitis eum nisi culpa corrupti dignissimos perspiciatis blanditiis voluptatum placeat quasi.
+                Pariatur assumenda odio esse possimus veniam distinctio non architecto itaque tenetur?</p>
+            <br>
+
+            <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim duis enim non ac ut. Ut et
+                arcu purus
+                sagittis elementum cursus. Laoreet eu aliquam diam scelerisque. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit.
+                Debitis eum nisi culpa corrupti dignissimos perspiciatis blanditiis voluptatum placeat quasi.
+                Pariatur assumenda odio esse possimus veniam distinctio non architecto itaque tenetur?</p>
+            <br>
+            <br>
+            <center>
+                <div id="button">
+                    <a href="/app/templates/upload.html" style="color: white;">Continue</a> 
+                </div>
+            </center>
+            <br>
+            <br>
+
+        </div>
+
+    </div>
+
+    
+    <!-- Footer here -->
+
+    <div class="flex-container" style="background-color: black; color: white; padding: 16px;">
+
+        <div class="flex-item-left" style="padding: 16px;">
+
+            <p id="content">Reach Out</p>
+
+            <table>
+                <tr>
+                    <td><img src="/app/static/images/linkedin.svg"></td>
+                    <td><img src="/app/static/images/instagram.svg"></td>
+                    <td><img src="/app/static/images/twitter.svg"></td>
+                    <td><img src="/app/static/images/github.svg"></td>
+                </tr>
+            </table>
+
+            <p id="content">Phone +91 9191919191</p>
+            <p id="content">Mail Us teamten@gmail.com</p>
+            <br>
+
+        </div>
+
+
+        <div class="flex-item-right">
+            <center>
+                <fieldset>
+                    <legend>Feedback</legend>
+
+                    <input type="email" name="email" id="email" placeholder="someone@gmail.com">
+                    <br>
+                    <input type="text" name="address" id="address"
+                        placeholder="We’d love to know what you think about our product!">
+
+                </fieldset>
+            </center>
+        </div>
+
+    </div>
+
+    <!-- Footer ends here -->
+
+
+    <script>
+        function navFlexFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function menuFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    </script>
+</body>
+
+</html>
